@@ -44,6 +44,10 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     system_ext
 
+# Display
+PRODUCT_PACKAGES += \
+    SettingsOverlayRefreshRate
+
 # Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
     InCallUI \
