@@ -49,5 +49,9 @@
 
     <!-- Height of area above QQS where battery/time go. -->
     <dimen name="quick_qs_offset_height">@dimen/status_bar_height_portrait</dimen>
+    
+    <!-- The default peak refresh rate for a given device. Change this value if you want to allow
+         for higher refresh rates to be automatically used out of the box -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
 </resources>
