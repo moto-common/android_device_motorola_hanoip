@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_caprip.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_hanoip.mk
 
 COMMON_LUNCH_CHOICES += \
-    aosp_caprip-eng \
-    aosp_caprip-userdebug
+    aosp_hanoip-eng \
+    aosp_hanoip-userdebug

@@ -16,26 +16,20 @@
 BOARD_BOOT_HEADER_VERSION := 3
 
 # PlatformConfig
-include device/motorola/sm4250-common/PlatformConfig.mk
+include device/motorola/sm6150-common/PlatformConfig.mk
 
-# Kernel cmdline
-BOARD_KERNEL_CMDLINE += \
-    androidboot.hab.csv=5 \
-    androidboot.hab.product=caprip \
-    androidboot.hab.cid=50
-
-TARGET_BOOTLOADER_BOARD_NAME := caprip
+TARGET_BOOTLOADER_BOARD_NAME := hanoip
 
 # Platform
-PRODUCT_PLATFORM := bengal
+PRODUCT_PLATFORM := sm6150
 
 # Kernel DTB/DTBO
-BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/sm4250-common-kernel/dtb
-BOARD_PREBUILT_DTBOIMAGE := device/motorola/sm4250-common-kernel/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/sm6150-common-kernel/dtb
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/sm6150-common-kernel/dtbo.img
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES := \
-    $(wildcard device/motorola/sm4250-common-kernel/modules/*.ko)
+    $(wildcard device/motorola/sm6150-common-kernel/modules/*.ko)
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)

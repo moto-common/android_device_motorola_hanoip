@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=caprip
+DEVICE=hanoip
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks

@@ -13,10 +13,10 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/motorola/caprip/rootdir
+DEVICE_PATH := device/motorola/hanoip/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/caprip/overlay
+    device/motorola/hanoip/overlay
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES := \
@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES := \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/sm4250-common-kernel/bengal-moto-guamc-Image.gz:kernel
+    device/motorola/sm6150-common-kernel/sm6150-moto-Image.gz:kernel
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -35,8 +35,8 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.caprip \
-    vendor-fstab.caprip \
+    fstab.hanoip \
+    vendor-fstab.hanoip \
     init.recovery.qcom.rc
 
 # AB Partitions
@@ -55,7 +55,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=280
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/sm4250-common/platform.mk)
+$(call inherit-product, device/motorola/sm6150-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/caprip/caprip-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/hanoip/hanoip-vendor.mk)
