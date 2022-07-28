@@ -55,7 +55,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=280
+    ro.sf.lcd_density=400
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
