@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES := \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/hanoip/prebuilt/Image.gz-dtb:kernel
+    device/motorola/hanoip/prebuilt/Image.gz:kernel
 
 # Kernel Headers
 PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/hanoip/prebuilt/kernel-headers

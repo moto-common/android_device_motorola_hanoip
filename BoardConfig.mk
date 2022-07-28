@@ -19,6 +19,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 include device/motorola/sm6150-common/PlatformConfig.mk
 
 # Kernel cmdline
+TARGET_PREBUILT_KERNEL := device/motorola/hanoip/prebuilt/Image.gz
 BOARD_KERNEL_CMDLINE += \
     androidboot.hab.csv=5 \
     androidboot.hab.product=hanoip \
