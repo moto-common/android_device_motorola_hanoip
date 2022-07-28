@@ -30,12 +30,12 @@ TARGET_BOOTLOADER_BOARD_NAME := hanoip
 PRODUCT_PLATFORM := sm6150
 
 # Kernel DTB/DTBO
-BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/sm6150-common-kernel/dtb
-BOARD_PREBUILT_DTBOIMAGE := device/motorola/sm6150-common-kernel/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := device/motorola/hanoip/prebuilt/dtb
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/hanoip/prebuilt/dtbo.img
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES := \
-    $(wildcard device/motorola/sm6150-common-kernel/modules/*.ko)
+    $(wildcard device/motorola/hanoip/prebuilt/modules/*.ko)
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)

@@ -25,7 +25,10 @@ PRODUCT_COPY_FILES := \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/sm6150-common-kernel/sm6150-moto--Image.gz-dtb:kernel
+    device/motorola/hanoip/prebuilt/Image.gz-dtb:kernel
+
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/hanoip/prebuilt/kernel-headers
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
