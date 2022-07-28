@@ -18,6 +18,9 @@ BOARD_BOOT_HEADER_VERSION := 3
 # PlatformConfig
 include device/motorola/sm6150-common/PlatformConfig.mk
 
+# Kernel
+TARGET_PREBUILT_KERNEL := device/motorola/sm6150-common-kernel/sm6150-moto-Image.gz
+
 TARGET_BOOTLOADER_BOARD_NAME := hanoip
 
 # Platform
