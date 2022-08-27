@@ -40,7 +40,9 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
 # AB Partitions
-AB_OTA_PARTITIONS += vendor_boot
+AB_OTA_PARTITIONS += \
+    vendor_boot \
+    system_ext
 
 # Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
