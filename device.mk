@@ -18,11 +18,6 @@ DEVICE_PATH := device/motorola/hanoip/rootdir
 DEVICE_PACKAGE_OVERLAYS += \
     device/motorola/hanoip/overlay
 
-# Device Specific Permissions
-PRODUCT_COPY_FILES := \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
-
 # Kernel
 PRODUCT_COPY_FILES += \
     device/motorola/sm6150-common-kernel/sm6150-moto-Image.gz:kernel
@@ -44,17 +39,16 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     system_ext
 
-# Telephony Packages (AOSP)
-PRODUCT_PACKAGES += \
-    InCallUI \
-    Stk
-
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=400
+
+# Fingerprint
+TARGET_USES_CHIPONE_FINGERPRINT := true
+TARGET_USES_FPC_FINGERPRINT := true
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
