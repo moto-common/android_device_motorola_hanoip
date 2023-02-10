@@ -12,8 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_hanoip.mk
-
-COMMON_LUNCH_CHOICES += \
-    aosp_hanoip-eng \
-    aosp_hanoip-userdebug
+PRODUCT_MAKEFILES := $(wildcard device/motorola/targets/devices/hanoip/*.mk)
