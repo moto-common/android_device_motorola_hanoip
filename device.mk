@@ -24,8 +24,7 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.hanoip \
-    vendor-fstab.hanoip \
+    fstab.qcom.vendor_ramdisk \
     init.recovery.qcom.rc
 
 # AB Partitions
