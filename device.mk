@@ -15,9 +15,6 @@
 # Device path
 DEVICE_PATH := device/motorola/hanoip/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/hanoip/overlay
-
 # Kernel
 PRODUCT_COPY_FILES += \
     device/motorola/hanoip-kernel/Image.gz:kernel
