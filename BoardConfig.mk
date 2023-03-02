@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Boot Header
-BOARD_BOOT_HEADER_VERSION := 3
-
-# PlatformConfig
+# Platform Config
+PRODUCT_PLATFORM := sm6150
 include device/motorola/sm6150-common/PlatformConfig.mk
 
-# Platform
-PRODUCT_PLATFORM := sm6150
+# Boot Header
+BOARD_BOOT_HEADER_VERSION := 3
 
 # Partition information
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)

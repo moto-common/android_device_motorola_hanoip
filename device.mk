@@ -15,6 +15,19 @@
 # Device path
 DEVICE_PATH := device/motorola/hanoip/rootdir
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.sf.lcd_density=400
+
+# AB Partitions
+AB_OTA_PARTITIONS += \
+    vendor_boot \
+    system_ext
+
 # Audio Configuration
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
@@ -26,31 +39,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom.vendor_ramdisk
 
-# AB Partitions
-AB_OTA_PARTITIONS += \
-    vendor_boot \
-    system_ext
-
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=400
-
 # Fingerprint
 TARGET_USES_CHIPONE_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
+
+# Media
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
 # Refresh Rate
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true \
     ro.surface_flinger.set_idle_timer_ms=500 \
     ro.surface_flinger.set_touch_timer_ms=400
-
-# Media
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
