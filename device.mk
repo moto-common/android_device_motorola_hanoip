@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
 TARGET_USES_CHIPONE_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
 
+# Model
+PRODUCT_MODEL := moto g(60)
+
 # Refresh Rate
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true \
