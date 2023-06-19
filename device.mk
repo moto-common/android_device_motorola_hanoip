@@ -28,6 +28,9 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     system_ext
 
+# Device characteristics
+DEVICE_CHARACTERISTICS := hfr
+
 # Fingerprint
 TARGET_USES_CHIPONE_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
