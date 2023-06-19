@@ -28,10 +28,6 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     system_ext
 
-# Device Init
-PRODUCT_PACKAGES += \
-    fstab_system_ext.qcom.vendor_ramdisk
-
 # Fingerprint
 TARGET_USES_CHIPONE_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
