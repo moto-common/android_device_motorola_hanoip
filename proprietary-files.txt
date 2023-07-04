@@ -140,10 +140,26 @@ vendor/firmware/CAMERA_ICP.elf
 # Display (Calibration Data)
 vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_ili7807s_fhd_678.xml
 
+# Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
+vendor/lib/hw/chipone.fingerprint.default.so
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/hw/chipone.fingerprint.default.so
+vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/libfp_ext_svc2.so
+vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
 # Firmware
 vendor/firmware/aw882xx_monitor.bin
 vendor/firmware/aw882xx_rcv_reg.bin
 vendor/firmware/aw882xx_spk_reg.bin
+
+# NFC
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/lib64/libpn557_fw.so
 
 # Sensors
 vendor/lib64/sensors.ssc.so

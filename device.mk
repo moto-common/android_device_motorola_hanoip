@@ -38,11 +38,8 @@ TARGET_USES_FPC_FINGERPRINT := true
 # Model
 PRODUCT_MODEL := moto g(60)
 
-# Refresh Rate
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
-    ro.surface_flinger.set_idle_timer_ms=500 \
-    ro.surface_flinger.set_touch_timer_ms=400
+# NFC
+TARGET_USES_PN5XX_PN8X_NFC := true
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
