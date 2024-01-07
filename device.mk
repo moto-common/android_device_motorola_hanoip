@@ -31,6 +31,10 @@ AB_OTA_PARTITIONS += \
 # Device characteristics
 DEVICE_CHARACTERISTICS := hfr
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.idle_time=0
+
 # Fingerprint
 TARGET_USES_CHIPONE_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
